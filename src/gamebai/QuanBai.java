@@ -1,6 +1,8 @@
 package gamebai;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Scanner;
 
 import exception.NumberException;
@@ -83,7 +85,7 @@ public class QuanBai {
 			// Nhập điểm
 			do {
 				try {
-					System.out.print("Nhap diem: ");
+					System.out.print("Nhap diem (tu 1 - 4): ");
 					diem = Integer.parseInt(sc.nextLine());
 					if (diem < 1 || diem > 4)
 						throw new NumberException("Vui long nhap diem tu 1 den 4!");
@@ -99,7 +101,7 @@ public class QuanBai {
 			check = true;
 			do {
 				try {
-					System.out.print("Nhap he so: ");
+					System.out.print("Nhap he so (tu 1 - 13): ");
 					heso = Integer.parseInt(sc.nextLine());
 					if (heso < 1 || heso > 13)
 						throw new NumberException("Vui long nhap he so tu 1 den 13!");
@@ -127,5 +129,35 @@ public class QuanBai {
 			}
 		} else
 			System.out.println("Chua co du lieu");
+	}
+
+	public static void sapXep(ArrayList<QuanBai> list) {
+		Collections.sort(list, new Comparator<QuanBai>() {
+			public int compare(QuanBai ts1, QuanBai ts2) {
+				if (ts1.getExp() < ts2.getExp()) {
+					return 1;
+				} else {
+					return -1;
+				}
+			}
+		});
+	}
+
+	public static QuanBai timKiem(ArrayList<QuanBai> list) {
+		System.out.print("Nhập tên quân bài muốn tìm kiếm: ");
+		String name = sc.nextLine();
+		for (QuanBai qb : list) {
+			if (name.equals(qb.getName()))
+				return qb;
+		}
+		return null;
+	}
+
+	public static void tim(ArrayList<QuanBai> list) {
+		QuanBai qb = timKiem(list);
+		if (qb != null) {
+			System.out.println(qb);
+		} else
+			System.out.println("Không tìm thấy!");
 	}
 }

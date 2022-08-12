@@ -1,2 +1,9 @@
 eclipse.preferences.version=1
+encoding//src/action/HocVienAction.java=UTF-8
+encoding//src/action/LapTrinhVienAction.java=UTF-8
+encoding//src/action/NhanVienAction.java=UTF-8
+encoding//src/bean/LapTrinhVien.java=UTF-8
+encoding//src/bean/NhanVien.java=UTF-8
 encoding//src/gamebai/QuanBai.java=UTF-8
+encoding//src/gamebai/QuanBaiDemo.java=UTF-8
+encoding//src/test/InputData.java=UTF-8
