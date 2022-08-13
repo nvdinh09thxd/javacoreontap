@@ -2,8 +2,8 @@ package main;
 
 import java.util.ArrayList;
 
-import action.HocVienAction;
-import bean.HocVien;
+import actions.HocVienAction;
+import beans.HocVien;
 
 public class HocVienMain {
 	public static void main(String[] args) {

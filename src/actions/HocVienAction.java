@@ -1,4 +1,4 @@
-package action;
+package actions;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -6,7 +6,7 @@ import java.util.Comparator;
 import java.util.Random;
 import java.util.Scanner;
 
-import bean.HocVien;
+import beans.HocVien;
 import exception.NumberException;
 
 public class HocVienAction {
